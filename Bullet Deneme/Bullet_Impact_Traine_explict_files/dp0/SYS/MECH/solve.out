@@ -1,0 +1,30 @@
+Cycle:    45205, Time:  8.405E-04s, Time Inc.: 1.871E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45206, Time:  8.405E-04s, Time Inc.: 1.873E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45207, Time:  8.405E-04s, Time Inc.: 1.874E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45208, Time:  8.405E-04s, Time Inc.: 1.875E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45209, Time:  8.405E-04s, Time Inc.: 1.876E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45210, Time:  8.406E-04s, Time Inc.: 1.877E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45211, Time:  8.406E-04s, Time Inc.: 1.879E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.2 hrs
+Cycle:    45212, Time:  8.406E-04s, Time Inc.: 1.880E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45213, Time:  8.406E-04s, Time Inc.: 1.881E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45214, Time:  8.406E-04s, Time Inc.: 1.882E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45215, Time:  8.407E-04s, Time Inc.: 1.883E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45216, Time:  8.407E-04s, Time Inc.: 1.885E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45217, Time:  8.407E-04s, Time Inc.: 1.886E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45218, Time:  8.407E-04s, Time Inc.: 1.887E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.0 hrs
+Cycle:    45219, Time:  8.407E-04s, Time Inc.: 1.888E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45220, Time:  8.408E-04s, Time Inc.: 1.890E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45221, Time:  8.408E-04s, Time Inc.: 1.891E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+Cycle:    45222, Time:  8.408E-04s, Time Inc.: 1.892E-08s, Progress:   0.01%, Est. Clock Time Remaining: 3860.1 hrs
+ 
+ 
+SIMULATION ELAPSED TIME SUMMARY
+ 
+EXECUTION FROM CYCLE        0 TO    45222
+ELAPSED RUN TIME IN SOLVER =      2.42215E+01 Minutes
+TOTAL ELAPSED RUN TIME     =      2.43731E+01 Minutes
+ 
+Problem terminated by user
+ 
+ ********************************************
+ 

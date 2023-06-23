@@ -1,0 +1,74 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+template1 = GetTemplate(
+    TemplateName="Explicit Dynamics",
+    Solver="AUTODYN")
+system1 = template1.CreateSystem()
+Save(Overwrite=True)
+system1.DisplayText = "Bullet Impact Anallysıs"
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+matlProp1 = material1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Orthotropic",
+    Qualifiers={"Definition": "", "Behavior": "Orthotropic"})
+material1.SetSuppression(Suppressed=True)
+material1.SetSuppression(Suppressed=False)
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="Magnetic B-H Curves",
+    Source="Magnetic_B-H_curves_Soft_Materials.xml")
+library2 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+matl2 = engineeringData1.ImportMaterial(
+    Name="Copper Alloy",
+    Source="General_Materials.xml")
+material1.SetSuppression(Suppressed=True)
+material1.SetSuppression(Suppressed=False)
+matl1.SetSuppression(Suppressed=True)
+matl2.SetSuppression(Suppressed=True)
+material1.SetSuppression(Suppressed=True)
+material1.SetSuppression(Suppressed=False)
+matl2.SetSuppression(Suppressed=False)
+matl1.SetSuppression(Suppressed=False)
+material1.SetAsDefaultSolidForModel(Default=False)
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+material1.Delete()
+matl3 = engineeringData1.ImportMaterial(
+    Name="Structural Steel",
+    Source="General_Materials.xml")
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+EngData.EnableFilter(Enable=False)
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+geometry1.Edit()
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Reset()
+geometry1.Edit()
+geometry1.Exit()
+geometryComponent1.Reset()
+geometry1.Edit()
+Save(Overwrite=True)
+geometry1.Exit()
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+geometry1.Edit()
+geometry1.Exit()
+model1.Exit()
+modelComponent1.Refresh()
+model1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+model1.Exit()
+Save(Overwrite=True)
+Save(Overwrite=True)

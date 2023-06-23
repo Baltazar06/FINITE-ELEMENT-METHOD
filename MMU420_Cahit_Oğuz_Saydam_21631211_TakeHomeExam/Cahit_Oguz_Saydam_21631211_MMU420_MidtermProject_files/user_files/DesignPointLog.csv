@@ -1,0 +1,96 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by ANSYS Workbench.
+# Project name: fem5weekmıdtermdeneme
+# Creation date: 04/06/2023 14:47:12
+# 
+# 04/06/2023 14:47:12
+# The parameters defined in the project are:
+# ,P1 - Young's Modulus [Pa]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1
+DP 0,200000000000
+DP 1,2
+DP 2,1
+DP 3,2
+DP 4,1
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/07/2023 14:03:51
+# 
+# 
+# 04/07/2023 14:25:34
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P1 - cls_cutout,P2 - Thickness,P3 - Young's Modulus [Pa],P16 - Force Y Component [N],P17 - Directional Deformation Maximum [mm],P18 - Directional Deformation Average [mm],P19 - Equivalent Stress Minimum [MPa],P14 - Total Deformation,P15 - Equivalent Stress,P20 - Equivalent Stress Maximum [MPa],P21 - Equivalent Stress Average [MPa],P22 - Mesh Element Size [mm],P23 - Directional Deformation Minimum [mm]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2,P3,P16,P17,P18,P19,P14,P15,P20,P21,P22,P23
+DP 1,4,10,200000000000,1000,2.0034441947937012,0.76168988268965732,12.099354916005813,2,1,585.22859128420134,298.34256488120269,0,0
+DP 2,3,10,200000000000,1500,3.0051662921905518,1.1425348308537375,18.149032146919961,2,1,877.842855210018,447.51384644703739,0,0
+DP 3,2,10,200000000000,2000,4.0068883895874023,1.5233797653793146,24.198709832011627,2,1,1170.4571825684027,596.68512976240538,0,0
+DP 4,1,10,200000000000,2500,5.008610725402832,1.9042247090703588,30.248387559172208,2,1,1463.0713866525407,745.856415017132,0,0
+# 
+# 04/07/2023 14:30:04
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P3 - Young's Modulus [Pa],P16 - Force Y Component [N],P17 - Directional Deformation Maximum [mm],P18 - Directional Deformation Average [mm],P19 - Equivalent Stress Minimum [MPa],P20 - Equivalent Stress Maximum [MPa],P21 - Equivalent Stress Average [MPa],P22 - Mesh Element Size [mm],P23 - Directional Deformation Minimum [mm]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P3,P16,P17,P18,P19,P20,P21,P22,P23
+DP 5,200000000000,3000,6.0103325843811035,2.2850696617074751,36.298064293839921,1755.685710420036,895.02769289407479,0,0
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/07/2023 14:31:22
+# 
+# 
+# 04/07/2023 14:39:02
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P16 - Force Y Component [N],P17 - Directional Deformation Maximum [mm],P18 - Directional Deformation Average [mm],P19 - Equivalent Stress Minimum [MPa],P20 - Equivalent Stress Maximum [MPa],P21 - Equivalent Stress Average [MPa],P22 - Mesh Element Size [mm],P23 - Directional Deformation Minimum [mm]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P16,P17,P18,P19,P20,P21,P22,P23
+DP 0,500,1.0017217397689819,0.38082031459690863,6.0432600807795369,292.58363771479816,149.17675613653779,3.9528,0
+DP 1,1000,2.0034434795379639,0.76164062919381725,12.086520161559074,585.16727542959632,298.35351227307558,3.9528,0
+DP 2,1500,3.0051653385162354,1.1424609482503287,18.129780963522528,877.750883348344,447.53026451158831,3.9528,0
+DP 3,2000,4.0068869590759277,1.5232812583876345,24.173040323118148,1170.3345508591926,596.70702454615116,3.9528,0
+DP 4,2500,5.0086088180541992,1.9041015790112745,30.216300608840896,1462.9182720253584,745.88378127489909,3.9528,0
+DP 5,3000,6.0103306770324707,2.2849218965006575,36.259561927045056,1755.501766696688,895.06052902317663,3.9528,0
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/18/2023 14:52:05
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/24/2023 20:37:21
+# 
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/26/2023 09:35:50
+# 
+# 
+# 04/26/2023 10:06:30
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P41 - Mesh Elements,P25 - Force X Component [N],P40 - Mesh Nodes,P29 - Total Deformation Maximum [mm],P30 - Total Deformation Average [mm],P31 - Equivalent Stress Maximum [MPa],P32 - Equivalent Stress Minimum [MPa],P33 - Equivalent Stress Average [MPa],P38 - Directional Deformation Minimum [mm],P37 - Directional Deformation Maximum [mm],P39 - Directional Deformation Average [mm],P56 - Mesh Element Size [mm],P54 - Directional Deformation Minimum [mm],P55 - Directional Deformation Average [mm],P47 - Total Deformation Maximum [mm],P57 - Mesh Nodes,P49 - Total Deformation Average [mm],P58 - Mesh Elements,P59 - Force Y Component [N],P61 - Total Deformation Maximum [mm],P62 - Total Deformation Average [mm],P63 - Directional Deformation Minimum [mm],P65 - Directional Deformation Average [mm],P66 - Equivalent Stress Minimum [MPa],P67 - Equivalent Stress Maximum [MPa],P68 - Equivalent Stress Average [MPa],P76 - Equivalent Stress Minimum [MPa],P77 - Equivalent Stress Maximum [MPa],P78 - Equivalent Stress Average [MPa],P79 - Directional Deformation Minimum [mm],P80 - Directional Deformation Maximum [mm],P81 - Directional Deformation Average [mm],P82 - Total Deformation Minimum [mm],P83 - Total Deformation Maximum [mm],P84 - Total Deformation Average [mm],P85 - Force Y Component [N],P86 - Force 2 X Component [N]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P41,P25,P40,P29,P30,P31,P32,P33,P38,P37,P39,P56,P54,P55,P47,P57,P49,P58,P59,P61,P62,P63,P65,P66,P67,P68,P76,P77,P78,P79,P80,P81,P82,P83,P84,P85,P86
+DP 1,80,-200,621,0.546945879767183,0.2080365777771665,135.99030443789505,2.119475328796157,43.569937735788137,-0.036790613085031509,0.036790613085031509,1.1656591895708938E-15,0,-0.550479531288147,-0.21011448116041717,0.550479531288147,84,0.21011448116041717,54,-200,0.547450602054596,0.207830243516669,-0.547450602054596,-0.207830243516669,2.5162305363585888,128.65464501733078,66.2817320594469,12.862414005838708,658.739030652672,216.04060379893639,-0.18471993505954742,0.18471992015838623,9.974289230290515E-06,0,2.7518374990155552,1.0445157995758994,-100,-200
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/26/2023 10:22:24
+# 
+# 
+# 04/26/2023 10:29:52
+# Parameters have been added and/or removed. The parameters now defined in the project are:
+# ,P41 - Mesh Elements,P25 - Force X Component [N],P40 - Mesh Nodes,P29 - Total Deformation Maximum [mm],P30 - Total Deformation Average [mm],P31 - Equivalent Stress Maximum [MPa],P32 - Equivalent Stress Minimum [MPa],P33 - Equivalent Stress Average [MPa],P38 - Directional Deformation Minimum [mm],P37 - Directional Deformation Maximum [mm],P39 - Directional Deformation Average [mm],P54 - Directional Deformation Minimum [mm],P55 - Directional Deformation Average [mm],P47 - Total Deformation Maximum [mm],P49 - Total Deformation Average [mm],P59 - Force Y Component [N],P61 - Total Deformation Maximum [mm],P62 - Total Deformation Average [mm],P63 - Directional Deformation Minimum [mm],P65 - Directional Deformation Average [mm],P66 - Equivalent Stress Minimum [MPa],P67 - Equivalent Stress Maximum [MPa],P68 - Equivalent Stress Average [MPa],P87 - Total Deformation Maximum [mm],P85 - Force Y Component [N],P86 - Force 2 X Component [N]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P41,P25,P40,P29,P30,P31,P32,P33,P38,P37,P39,P54,P55,P47,P49,P59,P61,P62,P63,P65,P66,P67,P68,P87,P85,P86
+DP 1,80,-200,621,0.546945879767183,0.2080365777771665,135.99030443789505,2.119475328796157,43.569937735788137,-0.036790613085031509,0.036790613085031509,1.1656591895708938E-15,-0.550479531288147,-0.21011448116041717,0.550479531288147,0.21011448116041717,-200,0.547450602054596,0.207830243516669,-0.547450602054596,-0.207830243516669,2.5162305363585888,128.65464501733078,66.2817320594469,5.50367499803111,-200,-200
+DP 2,80,-300,621,0.82041881952548279,0.31205486672887045,203.98545479794632,3.1792129806489786,65.354907024562351,-0.055185917764902115,0.055185917764902115,1.6835250400538805E-15,-0.82571929693222046,-0.3151717169464312,0.82571929693222046,0.3151717169464312,-300,0.82117593288421631,0.311745365256987,-0.82117593288421631,-0.311745365256987,3.7743458649703361,192.98196004554032,99.422598482459662,8.2555129738085746,-300,-300
+DP 3,80,-400,621,1.093891759534366,0.41607315555433294,271.9806088757901,4.2389506575923139,87.139875471578378,-0.073581226170063019,0.073581226170063019,2.2666110634932463E-15,-1.1009590625762939,-0.42022896232083434,1.1009590625762939,0.42022896232083434,-400,1.0949012041091919,0.415660487033338,-1.0949012041091919,-0.415660487033338,5.0324610727171777,257.30929003466156,132.56346411889379,11.007349996062221,-400,-400
+DP 4,80,-500,621,1.367364639823019,0.52009144461518031,339.97575536538119,5.2986882162064211,108.92484420781813,-0.091976530849933624,0.091976530849933624,3.0731282834283171E-15,-1.3761987686157227,-0.52528620238246571,1.3761987686157227,0.52528620238246571,-500,1.368626594543457,0.519575604719908,-1.368626594543457,-0.519575604719908,6.2905762804640606,321.63662085906662,165.70432974085489,13.759187969839173,-500,-500
+DP 5,80,-600,621,1.6408376390509656,0.624109733457741,407.97090959589264,6.3584259612979572,130.70981404912595,-0.11037183552980423,0.11037183552980423,3.7830973871984141E-15,-1.6514385938644409,-0.6303434338928624,1.6514385938644409,0.6303434338928624,-600,1.6423518657684326,0.623490730513974,-1.6423518657684326,-0.623490730513974,7.5486917299406722,385.96392009108064,198.84519696491932,16.511025947617149,-600,-600
+# 
+# A non parametric change occurred and invalidated design point results.
+# 04/27/2023 15:40:13
+# 

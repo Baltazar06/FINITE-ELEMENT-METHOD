@@ -1,0 +1,41 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+system1 = GetSystem(Name="SYS 3")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+matlProp1 = material1.GetProperty(Name="Elasticity")
+materialPropertyData1 = matlProp1.GetPropertyData(
+    Name="Elasticity",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic", "Derive from": "Young's Modulus and Poisson's Ratio"})
+materialVariable1 = materialPropertyData1.GetVariable(Name="Young's Modulus")
+parameter1 = Parameters.CreateParameter(
+    Entity=materialVariable1,
+    PropertyName="ParameterValue",
+    DisplayText="Young's Modulus")
+parameter1.ValueQuantityName = "Stress"
+Save(Overwrite=True)
+designPoint1 = Parameters.CreateDesignPoint()
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="2 [Pa]")
+designPoint2 = Parameters.CreateDesignPoint()
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="1 [Pa]")
+designPoint3 = Parameters.CreateDesignPoint()
+designPoint3.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="2 [Pa]")
+designPoint4 = Parameters.CreateDesignPoint()
+designPoint4.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="1 [Pa]")
+template1 = GetTemplate(
+    TemplateName="Explicit Dynamics",
+    Solver="AUTODYN")
+system2 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+Save(Overwrite=True)
+Open(FilePath="C:/COURSES/2023 BAHAR/FEM420 FINITE ELEMENT METHOD ONUR 2021/FEM-UĞUR/final/DENEME5_EXPLICIT/deneme5_explicit.wbpj")

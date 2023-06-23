@@ -1,0 +1,25 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+system1 = GetSystem(Name="SYS 4")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometryProperties1 = geometry1.GetGeometryProperties()
+geometryProperties1.GeometryImportAnalysisType = "AnalysisType_2D"
+geometry1.Edit()
+geometry1.Exit()
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+system1.DisplayText = "Plane 2D"
+system2 = GetSystem(Name="SYS 3")
+system2.Delete()
+system3 = GetSystem(Name="SYS 5")
+system3.Delete()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+model1.Exit()
+Save(Overwrite=True)

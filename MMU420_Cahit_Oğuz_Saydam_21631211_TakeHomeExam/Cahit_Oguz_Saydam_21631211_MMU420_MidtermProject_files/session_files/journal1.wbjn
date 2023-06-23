@@ -1,0 +1,74 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+system1.DisplayText = "3D"
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+system2 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+geometryComponent1 = system2.GetComponent(Name="Geometry")
+geometryComponent2 = system1.GetComponent(Name="Geometry")
+geometryComponent1.ReplaceWithShare(
+    TargetSystem=system2,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system1)
+geometryComponent1.DeleteShare(System=system2)
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.Edit(IsSpaceClaimGeometry=True)
+geometry2.Exit()
+system2.DisplayText = "be"
+system2.DisplayText = "BEAM"
+system3 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model1.Exit()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)
+geometry3 = system3.GetContainer(ComponentName="Geometry")
+geometry3.Edit(IsSpaceClaimGeometry=True)
+Save(Overwrite=True)
+model2.Exit()
+geometry3.Exit()
+modelComponent3 = system3.GetComponent(Name="Model")
+modelComponent3.Refresh()
+model3 = system3.GetContainer(ComponentName="Model")
+model3.Edit()
+Save(Overwrite=True)
+model3.Exit()
+system4 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system3)
+system4.DisplayText = "PLANE 2D"
+geometry4 = system4.GetContainer(ComponentName="Geometry")
+geometryProperties1 = geometry4.GetGeometryProperties()
+geometryProperties1.GeometryImportAnalysisType = "AnalysisType_2D"
+geometryComponent3 = system4.GetComponent(Name="Geometry")
+geometryComponent4 = system3.GetComponent(Name="Geometry")
+geometryComponent3.ReplaceWithShare(
+    TargetSystem=system4,
+    ComponentToShare=geometryComponent4,
+    SourceSystem=system3)
+geometryComponent3.DeleteShare(System=system4)
+modelComponent4 = system4.GetComponent(Name="Model")
+modelComponent4.Refresh()
+model4 = system4.GetContainer(ComponentName="Model")
+model4.Edit()
+Save(Overwrite=True)
+model4.Exit()
+geometry5 = system4.GetContainer(ComponentName="Geometry")
+geometryProperties2 = geometry5.GetGeometryProperties()
+geometryProperties2.GeometryImportAnalysisType = "AnalysisType_2D"
+Save(Overwrite=True)

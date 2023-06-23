@@ -1,0 +1,30 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+designPoint1 = Parameters.GetDesignPoint(Name="1")
+parameter1 = Parameters.GetParameter(Name="P25")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="-200 [N]")
+designPoint2 = Parameters.GetDesignPoint(Name="2")
+designPoint2.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="-300 [N]")
+designPoint3 = Parameters.GetDesignPoint(Name="3")
+designPoint3.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="-400 [N]")
+designPoint4 = Parameters.GetDesignPoint(Name="4")
+designPoint4.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="-500 [N]")
+designPoint5 = Parameters.GetDesignPoint(Name="5")
+designPoint5.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="-600 [N]")
+designPoint1.Retained = True
+designPoint2.Retained = True
+designPoint5.Retained = True
+designPoint3.Retained = True
+designPoint4.Retained = True
+Save(Overwrite=True)

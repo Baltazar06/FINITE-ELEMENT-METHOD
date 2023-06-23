@@ -1,0 +1,39 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+Save(Overwrite=True)
+system1 = GetSystem(Name="SYS")
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+favorites1 = EngData.LoadFavoriteItems()
+EngData.EnableFilter(Enable=False)
+library1 = EngData.OpenLibrary(
+    Name="Geomechanical Materials",
+    Source="GeoMechanical_Materials.xml")
+library2 = EngData.OpenLibrary(
+    Name="General Non-linear Materials",
+    Source="General Materials Non-linear.xml")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Aluminum Alloy NL",
+    Source="General Materials Non-linear.xml")
+system1.Update(AllDependencies=True)
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.SetSuppression(Suppressed=True)
+material1.SetSuppression(Suppressed=False)
+material1.Delete()
+system1.Update(AllDependencies=True)
+matl1.SetSuppression(Suppressed=True)
+matl1.SetSuppression(Suppressed=False)
+material2 = engineeringData1.GetMaterial(Name="Structural Steel")
+material2.SetSuppression(Suppressed=True)
+material2.SetSuppression(Suppressed=False)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+model1.Exit()
+Save(Overwrite=True)

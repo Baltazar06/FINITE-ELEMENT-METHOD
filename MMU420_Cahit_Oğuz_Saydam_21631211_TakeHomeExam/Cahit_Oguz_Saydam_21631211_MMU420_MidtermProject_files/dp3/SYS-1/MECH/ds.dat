@@ -1,0 +1,263 @@
+/batch
+/config,noeldb,1     ! force off writing results to database
+*get,_wallstrt,active,,time,wall
+! ANSYS input file written by Workbench version 2020 R2
+! File used for geometry attach: C:\Users\BALTAZAR\Desktop\ANSYS\MMU420FEM\Cahit_Oguz_Saydam_21631211_MMU420_MidtermProject_files\dp0\SYS-1\DM\SYS-1.scdoc
+/title,Cahit_Oguz_Saydam_21631211_MMU420_MidtermProject--Static Structural (B5)
+*DIM,_wb_ProjectScratch_dir,string,248
+_wb_ProjectScratch_dir(1) = 'C:\Users\BALTAZAR\Desktop\ANSYS\MMU420FEM\_ProjectScratch\Scr0CBA\'
+*DIM,_wb_SolverFiles_dir,string,248
+_wb_SolverFiles_dir(1) = 'C:\Users\BALTAZAR\Desktop\ANSYS\MMU420FEM\Cahit_Oguz_Saydam_21631211_MMU420_MidtermProject_files\dp3\SYS-1\MECH\'
+*DIM,_wb_userfiles_dir,string,248
+_wb_userfiles_dir(1) = 'C:\Users\BALTAZAR\Desktop\ANSYS\MMU420FEM\Cahit_Oguz_Saydam_21631211_MMU420_MidtermProject_files\user_files\'
+/com,--- Data in consistent NMM units. See Solving Units in the help system for more information.
+/units,MPA
+/nopr
+/wb,file,start              !  signify a WB generated input file
+/prep7
+! Turn off shape checking because checks already performed inside WB mesher.
+! See help system for more information.
+SHPP,OFF,,NOWARN
+/nolist
+etcon,set             ! allow ANSYS to choose best KEYOP's for 180x elements
+/com,*********** Nodes for the whole assembly ***********
+nblock,3,,47
+(1i9,3e20.9e3)
+        1    -5.000000000E+00    -1.100000000E+01    -5.000000000E+00
+        2    -5.000000000E+00     1.000000000E+02    -5.000000000E+00
+        3    -5.000000000E+00    -5.714285714E+00    -5.000000000E+00
+        4    -5.000000000E+00    -4.285714286E-01    -5.000000000E+00
+        5    -5.000000000E+00     4.857142857E+00    -5.000000000E+00
+        6    -5.000000000E+00     1.014285714E+01    -5.000000000E+00
+        7    -5.000000000E+00     1.542857143E+01    -5.000000000E+00
+        8    -5.000000000E+00     2.071428571E+01    -5.000000000E+00
+        9    -5.000000000E+00     2.600000000E+01    -5.000000000E+00
+       10    -5.000000000E+00     3.128571429E+01    -5.000000000E+00
+       11    -5.000000000E+00     3.657142857E+01    -5.000000000E+00
+       12    -5.000000000E+00     4.185714286E+01    -5.000000000E+00
+       13    -5.000000000E+00     4.714285714E+01    -5.000000000E+00
+       14    -5.000000000E+00     5.242857143E+01    -5.000000000E+00
+       15    -5.000000000E+00     5.771428571E+01    -5.000000000E+00
+       16    -5.000000000E+00     6.300000000E+01    -5.000000000E+00
+       17    -5.000000000E+00     6.828571429E+01    -5.000000000E+00
+       18    -5.000000000E+00     7.357142857E+01    -5.000000000E+00
+       19    -5.000000000E+00     7.885714286E+01    -5.000000000E+00
+       20    -5.000000000E+00     8.414285714E+01    -5.000000000E+00
+       21    -5.000000000E+00     8.942857143E+01    -5.000000000E+00
+       22    -5.000000000E+00     9.471428571E+01    -5.000000000E+00
+       23    -5.000000000E+00    -8.357142857E+00     2.857142857E-01
+       24    -5.000000000E+00    -3.071428571E+00     2.857142857E-01
+       25    -5.000000000E+00     2.214285714E+00     2.857142857E-01
+       26    -5.000000000E+00     7.500000000E+00     2.857142857E-01
+       27    -5.000000000E+00     1.278571429E+01     2.857142857E-01
+       28    -5.000000000E+00     1.807142857E+01     2.857142857E-01
+       29    -5.000000000E+00     2.335714286E+01     2.857142857E-01
+       30    -5.000000000E+00     2.864285714E+01     2.857142857E-01
+       31    -5.000000000E+00     3.392857143E+01     2.857142857E-01
+       32    -5.000000000E+00     3.921428571E+01     2.857142857E-01
+       33    -5.000000000E+00     4.450000000E+01     2.857142857E-01
+       34    -5.000000000E+00     4.978571429E+01     2.857142857E-01
+       35    -5.000000000E+00     5.507142857E+01     2.857142857E-01
+       36    -5.000000000E+00     6.035714286E+01     2.857142857E-01
+       37    -5.000000000E+00     6.564285714E+01     2.857142857E-01
+       38    -5.000000000E+00     7.092857143E+01     2.857142857E-01
+       39    -5.000000000E+00     7.621428571E+01     2.857142857E-01
+       40    -5.000000000E+00     8.150000000E+01     2.857142857E-01
+       41    -5.000000000E+00     8.678571429E+01     2.857142857E-01
+       42    -5.000000000E+00     9.207142857E+01     2.857142857E-01
+       43    -5.000000000E+00     9.735714286E+01     2.857142857E-01
+-1
+/wb,elem,start            !  set before creation of elements
+/com,*********** Elements for Body 1 "SYS-1\Beam (Extracted Profile1)" ***********
+et,1,188
+keyo,1,3,2
+eblock,19,solid,,21
+(19i9)
+        1        1        1        1        0        0        0        0        3        0        1        1        3       23
+        1        1        1        1        0        0        0        0        3        0        2        3        4       24
+        1        1        1        1        0        0        0        0        3        0        3        4        5       25
+        1        1        1        1        0        0        0        0        3        0        4        5        6       26
+        1        1        1        1        0        0        0        0        3        0        5        6        7       27
+        1        1        1        1        0        0        0        0        3        0        6        7        8       28
+        1        1        1        1        0        0        0        0        3        0        7        8        9       29
+        1        1        1        1        0        0        0        0        3        0        8        9       10       30
+        1        1        1        1        0        0        0        0        3        0        9       10       11       31
+        1        1        1        1        0        0        0        0        3        0       10       11       12       32
+        1        1        1        1        0        0        0        0        3        0       11       12       13       33
+        1        1        1        1        0        0        0        0        3        0       12       13       14       34
+        1        1        1        1        0        0        0        0        3        0       13       14       15       35
+        1        1        1        1        0        0        0        0        3        0       14       15       16       36
+        1        1        1        1        0        0        0        0        3        0       15       16       17       37
+        1        1        1        1        0        0        0        0        3        0       16       17       18       38
+        1        1        1        1        0        0        0        0        3        0       17       18       19       39
+        1        1        1        1        0        0        0        0        3        0       18       19       20       40
+        1        1        1        1        0        0        0        0        3        0       19       20       21       41
+        1        1        1        1        0        0        0        0        3        0       20       21       22       42
+        1        1        1        1        0        0        0        0        3        0       21       22        2       43
+-1
+!Material Id = {CD3236B9-300F-403A-9525-7F72D712B8CD}
+/wb,elem,end               !  done creating elements
+/com,*********** Send User Defined Coordinate System(s) ***********
+csys,0
+toffst,273.15,  ! Temperature offset from absolute zero
+/com,*********** Set Reference Temperature ***********
+tref,22.
+/wb,mat,start              !  starting to send materials
+/com,*********** Send Materials ***********
+Temperature = 'TEMP' ! Temperature
+MP,DENS,1,7.85e-09,	! tonne mm^-3
+MP,ALPX,1,1.2e-05,	! C^-1
+MP,C,1,434000000,	! mm^2 s^-2 C^-1
+MP,KXX,1,60.5,	! tonne mm s^-3 C^-1
+MP,RSVX,1,0.00017,	! ohm mm
+MP,EX,1,200000,	! tonne s^-2 mm^-1
+MP,NUXY,1,0.3,
+MP,MURX,1,10000,
+
+/wb,mat,end                !  done sending materials
+/com,*********** Send Beam Properties ***********
+SECTYPE,1,BEAM,RECT
+SECDATA,10.,10.
+secoffset,cent
+
+!************************* Model Summary ********************
+!SYS-1\Beam (Extracted Profile1),	Structural Steel,	matid,	1
+!************************* End Model Summary ********************
+! get the diagonal of the bounding box. Needed later for other things
+*get,_xmin,node,,mnloc,x
+*get,_ymin,node,,mnloc,y
+*get,_zmin,node,,mnloc,z
+*get,_xmax,node,,mxloc,x
+*get,_ymax,node,,mxloc,y
+*get,_zmax,node,,mxloc,z
+_ASMDIAG=(_xmax-_xmin)*(_xmax-_xmin)+(_ymax-_ymin)*(_ymax-_ymin)+(_zmax-_zmin)*(_zmax-_zmin)
+_ASMDIAG=SQRT(_ASMDIAG)
+/wb,contact,start          !  starting to send contact
+/wb,contact,end            !  done creating contacts
+/golist
+/wb,load,start             !  starting to send loads
+/com,*********** Fixed Supports ***********
+CMBLOCK,_FIXEDSU,NODE,        1
+(8i10)
+         2
+cmsel,s,_FIXEDSU
+d,all,all
+nsel,all
+/com,*********** Define Vertex Force Using Follower Elements ***********
+et,2,201
+keyo,2,1,1           ! Keep the direction constant
+keyo,2,2,1           ! Apply Forces only, not moment
+mat,2
+real,2
+type,2
+en,22,1
+r,2
+rmod,2,1,1.0,              ! FX
+mat,3
+real,3
+type,2
+en,23,1
+r,3
+rmod,3,2,1.0,              ! FY
+mat,4
+real,4
+type,2
+en,24,1
+r,4
+rmod,4,3,1.0,              ! FZ
+/gst,on,on
+fini
+*get,_numnode,node,0,count
+*get,_numelem,elem,0,count
+*get, _MAXELEMNUM, elem, 0, NUM, MAX
+*get, _MAXNODENUM, node, 0, NUM, MAX
+*get, _MAXELEMTYPE, etyp, 0, NUM, MAX
+*get, _MAXREALCONST, real, 0, NUM, MAX
+/go
+/wb,load,end               !  done creating loads
+/com,--- Number of total nodes = %_numnode%
+/com,--- Number of contact elements = 0
+/com,--- Number of spring elements = 0
+/com,--- Number of bearing elements = 0
+/com,--- Number of solid elements = 21
+/com,--- Number of condensed parts = 0
+/com,--- Number of total elements = %_numelem%
+*get,_wallbsol,active,,time,wall
+/com,****************************************************************************
+/com,*************************    SOLUTION       ********************************
+/com,****************************************************************************
+/solu
+antype,0                   ! static analysis
+_thickRatio=  0     ! Ratio of thick parts in the model
+eqsl,sparse,,,,,1
+cntr,print,1               ! print out contact info and also make no initial contact an error
+nldiag,cont,iter           ! print out contact info each equilibrium iteration
+rescontrol,,none                 ! Do not keep any restart files
+/com,****************************************************
+/com,******************* SOLVE FOR LS 1 OF 1 ****************
+esel,s,real,,2
+sfe,all,1,pres,1,-400.
+esel,s,real,,3
+sfe,all,1,pres,1,0.
+esel,s,real,,4
+sfe,all,1,pres,1,0.
+esel,all
+/nopr
+/gopr
+nsub,1,1,1
+time,1.
+outres,erase
+outres,all,none
+outres,nsol,all,
+outres,rsol,all
+outres,eangl,all
+outres,etmp,all
+outres,veng,all
+outres,strs,all,
+outres,epel,all,
+outres,eppl,all,
+outres,cont,all,
+/nopr
+esel,s,type,,1
+cm,_elmisc,elem
+esel,all
+/gopr
+outres,misc,all,_elmisc
+! *********** WB SOLVE COMMAND ***********
+! check interactive state
+*get,ANSINTER_,active,,int
+*if,ANSINTER_,ne,0,then
+/eof
+*endif
+solve
+/com *************** Write FE CONNECTORS ********* 
+CEWRITE,file,ce,,INTE
+/com,****************************************************
+/com,*************** FINISHED SOLVE FOR LS 1 *************
+*get,_wallasol,active,,time,wall
+/nopr
+*get,_numnode,node,0,count
+*get,_numelem,elem,0,count
+*get, _MAXELEMNUM, elem, 0, NUM, MAX
+*get, _MAXNODENUM, node, 0, NUM, MAX,,,INTERNAL
+*get, _MAXELEMTYPE, etyp, 0, NUM, MAX
+*get, _MAXREALCONST, real, 0, NUM, MAX
+/gopr
+/post1
+xmlo,ENCODING,ISO-8859-1
+xmlo,parm
+/xml,parm,xml
+fini
+/gopr
+*get,_walldone,active,,time,wall
+_preptime=(_wallbsol-_wallstrt)*3600
+_solvtime=(_wallasol-_wallbsol)*3600
+_posttime=(_walldone-_wallasol)*3600
+_totaltim=(_walldone-_wallstrt)*3600
+*get,_dlbratio,active,0,solu,dlbr
+*get,_combtime,active,0,solu,comb
+/com,--- Total number of nodes = %_numnode%
+/com,--- Total number of elements = %_numelem%
+/com,--- Element load balance ratio = %_dlbratio%
+/com,--- Time to combine distributed files = %_combtime%
+/wb,file,end               ! done with WB generated input

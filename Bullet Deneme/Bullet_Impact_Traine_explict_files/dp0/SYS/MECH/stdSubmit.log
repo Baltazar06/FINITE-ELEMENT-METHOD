@@ -1,0 +1,4 @@
+Running Solver : C:\Program Files\ANSYS Inc\v202\aisol\bin\winx64\Ansys.Solvers.Explicit.Launcher.exe -input ".\admodel_0.ad" -exd -double
+admodel
+C:\Program Files\ANSYS Inc\v202\aisol\bin\winx64\Ansys.Solvers.AUTODYN.exe
+.\admodel_0.ad

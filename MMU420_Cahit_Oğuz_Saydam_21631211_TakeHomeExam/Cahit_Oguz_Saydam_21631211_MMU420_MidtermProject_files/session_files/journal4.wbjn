@@ -1,0 +1,331 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+parameter1 = Parameters.GetParameter(Name="P1")
+system1 = GetSystem(Name="SYS 3")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+matlProp1 = material1.GetProperty(Name="Elasticity")
+materialPropertyData1 = matlProp1.GetPropertyData(
+    Name="Elasticity",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic", "Derive from": "Young's Modulus and Poisson's Ratio"})
+materialVariable1 = materialPropertyData1.GetVariable(Name="Young's Modulus")
+parameter1.Disassociate(
+    Entity=materialVariable1,
+    PropertyName="ParameterValue")
+parameter1.Delete()
+parameter2 = Parameters.CreateParameter(
+    IsOutput=False,
+    DisplayText="ds")
+parameter2.DisplayText = "cls_cutout"
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="5")
+parameter3 = Parameters.CreateParameter(
+    IsOutput=False,
+    Expression="10",
+    DisplayText="Input Parameter")
+parameter3.DisplayText = "Thickness"
+material1.SetSuppression(Suppressed=True)
+material1.SetSuppression(Suppressed=False)
+matlProp2 = material1.GetProperty(Name="Tensile Yield Strength")
+materialPropertyData2 = matlProp2.GetPropertyData(
+    Name="Tensile Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+materialVariable2 = materialPropertyData2.GetVariable(Name="Tensile Yield Strength")
+parameter4 = Parameters.CreateParameter(
+    Entity=materialVariable2,
+    PropertyName="ParameterValue",
+    DisplayText="Tensile Yield Strength")
+parameter4.ValueQuantityName = "Stress"
+matlProp3 = material1.GetProperty(Name="Compressive Yield Strength")
+materialPropertyData3 = matlProp3.GetPropertyData(
+    Name="Compressive Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+materialVariable3 = materialPropertyData3.GetVariable(Name="Compressive Yield Strength")
+parameter5 = Parameters.CreateParameter(
+    Entity=materialVariable3,
+    PropertyName="ParameterValue",
+    DisplayText="Compressive Yield Strength")
+parameter5.ValueQuantityName = "Stress"
+matlProp4 = material1.GetProperty(Name="Tensile Ultimate Strength")
+materialPropertyData4 = matlProp4.GetPropertyData(
+    Name="Tensile Ultimate Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+materialVariable4 = materialPropertyData4.GetVariable(Name="Tensile Ultimate Strength")
+parameter6 = Parameters.CreateParameter(
+    Entity=materialVariable4,
+    PropertyName="ParameterValue",
+    DisplayText="Tensile Ultimate Strength")
+parameter6.ValueQuantityName = "Stress"
+matlProp5 = material1.GetProperty(Name="Compressive Ultimate Strength")
+materialPropertyData5 = matlProp5.GetPropertyData(
+    Name="Compressive Ultimate Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+materialVariable5 = materialPropertyData5.GetVariable(Name="Compressive Ultimate Strength")
+parameter7 = Parameters.CreateParameter(
+    Entity=materialVariable5,
+    PropertyName="ParameterValue",
+    DisplayText="Compressive Ultimate Strength")
+parameter7.ValueQuantityName = "Stress"
+parameter4.Disassociate(
+    Entity=materialVariable2,
+    PropertyName="ParameterValue")
+parameter4.Delete()
+parameter5.Disassociate(
+    Entity=materialVariable3,
+    PropertyName="ParameterValue")
+parameter5.Delete()
+parameter6.Disassociate(
+    Entity=materialVariable4,
+    PropertyName="ParameterValue")
+parameter6.Delete()
+parameter7.Disassociate(
+    Entity=materialVariable5,
+    PropertyName="ParameterValue")
+parameter7.Delete()
+parameter8 = Parameters.CreateParameter(
+    Entity=materialVariable1,
+    PropertyName="ParameterValue",
+    DisplayText="Young's Modulus")
+parameter8.ValueQuantityName = "Stress"
+Save(Overwrite=True)
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+system2 = GetSystem(Name="SYS 2")
+geometryComponent2 = system2.GetComponent(Name="Geometry")
+geometryComponent1.ReplaceWithShare(
+    TargetSystem=system1,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system2)
+geometryComponent1.DeleteShare(System=system1)
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+matlProp6 = material1.GetProperty(Name="Strain-Life Parameters")
+materialPropertyData6 = matlProp6.GetPropertyData(
+    Name="Strain-Life Parameters",
+    Qualifiers={"Definition": "", "Behavior": "", "Display Curve Type": "Strain-Life"})
+materialVariable6 = materialPropertyData6.GetVariable(Name="Strength Coefficient")
+parameter9 = Parameters.CreateParameter(
+    Entity=materialVariable6,
+    PropertyName="ParameterValue",
+    DisplayText="Strength Coefficient")
+parameter9.ValueQuantityName = "Stress"
+materialVariable7 = materialPropertyData6.GetVariable(Name="Strength Exponent")
+parameter10 = Parameters.CreateParameter(
+    Entity=materialVariable7,
+    PropertyName="ParameterValue",
+    DisplayText="Strength Exponent")
+parameter10.ValueQuantityName = ""
+parameter10.Disassociate(
+    Entity=materialVariable7,
+    PropertyName="ParameterValue")
+parameter10.Delete()
+materialVariable8 = materialPropertyData6.GetVariable(Name="Ductility Coefficient")
+parameter11 = Parameters.CreateParameter(
+    Entity=materialVariable8,
+    PropertyName="ParameterValue",
+    DisplayText="Ductility Coefficient")
+parameter11.ValueQuantityName = ""
+parameter12 = Parameters.CreateParameter(
+    Entity=materialVariable7,
+    PropertyName="ParameterValue",
+    DisplayText="Strength Exponent")
+parameter12.ValueQuantityName = ""
+materialVariable9 = materialPropertyData6.GetVariable(Name="Ductility Exponent")
+parameter13 = Parameters.CreateParameter(
+    Entity=materialVariable9,
+    PropertyName="ParameterValue",
+    DisplayText="Ductility Exponent")
+parameter13.ValueQuantityName = ""
+materialVariable10 = materialPropertyData6.GetVariable(Name="Cyclic Strength Coefficient")
+parameter14 = Parameters.CreateParameter(
+    Entity=materialVariable10,
+    PropertyName="ParameterValue",
+    DisplayText="Cyclic Strength Coefficient")
+parameter14.ValueQuantityName = "Stress"
+materialVariable11 = materialPropertyData6.GetVariable(Name="Cyclic Strain Hardening Exponent")
+parameter15 = Parameters.CreateParameter(
+    Entity=materialVariable11,
+    PropertyName="ParameterValue",
+    DisplayText="Cyclic Strain Hardening Exponent")
+parameter15.ValueQuantityName = ""
+parameter16 = Parameters.CreateParameter(
+    Entity=materialVariable2,
+    PropertyName="ParameterValue",
+    DisplayText="Tensile Yield Strength")
+parameter16.ValueQuantityName = "Stress"
+parameter17 = Parameters.CreateParameter(
+    Entity=materialVariable3,
+    PropertyName="ParameterValue",
+    DisplayText="Compressive Yield Strength")
+parameter17.ValueQuantityName = "Stress"
+parameter18 = Parameters.CreateParameter(
+    Entity=materialVariable4,
+    PropertyName="ParameterValue",
+    DisplayText="Tensile Ultimate Strength")
+parameter18.ValueQuantityName = "Stress"
+parameter19 = Parameters.CreateParameter(
+    Entity=materialVariable5,
+    PropertyName="ParameterValue",
+    DisplayText="Compressive Ultimate Strength")
+parameter19.ValueQuantityName = "Stress"
+system1.Update(AllDependencies=True)
+parameter20 = Parameters.CreateParameter(
+    IsOutput=True,
+    Expression="2",
+    DisplayText="Output Parameter")
+parameter21 = Parameters.CreateParameter(
+    IsOutput=True,
+    Expression="1",
+    DisplayText="Output Parameter")
+parameter20.DisplayText = "Total Deformation"
+parameter21.DisplayText = "Equivalent"
+parameter21.DisplayText = "Equivalent Stress"
+designPoint2 = Parameters.CreateDesignPoint()
+designPoint2.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="4")
+designPoint3 = Parameters.CreateDesignPoint()
+designPoint3.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="3")
+designPoint4 = Parameters.CreateDesignPoint()
+designPoint4.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="2")
+designPoint5 = Parameters.CreateDesignPoint()
+designPoint5.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="1")
+parameter19.Disassociate(
+    Entity=materialVariable5,
+    PropertyName="ParameterValue")
+parameter19.Delete()
+parameter18.Disassociate(
+    Entity=materialVariable4,
+    PropertyName="ParameterValue")
+parameter18.Delete()
+parameter17.Disassociate(
+    Entity=materialVariable3,
+    PropertyName="ParameterValue")
+parameter17.Delete()
+parameter16.Disassociate(
+    Entity=materialVariable2,
+    PropertyName="ParameterValue")
+parameter16.Delete()
+parameter9.Disassociate(
+    Entity=materialVariable6,
+    PropertyName="ParameterValue")
+parameter9.Delete()
+parameter12.Disassociate(
+    Entity=materialVariable7,
+    PropertyName="ParameterValue")
+parameter12.Delete()
+parameter11.Disassociate(
+    Entity=materialVariable8,
+    PropertyName="ParameterValue")
+parameter11.Delete()
+parameter13.Disassociate(
+    Entity=materialVariable9,
+    PropertyName="ParameterValue")
+parameter13.Delete()
+parameter14.Disassociate(
+    Entity=materialVariable10,
+    PropertyName="ParameterValue")
+parameter14.Delete()
+parameter15.Disassociate(
+    Entity=materialVariable11,
+    PropertyName="ParameterValue")
+parameter15.Delete()
+parameter22 = Parameters.GetParameter(Name="P16")
+designPoint2.SetParameterExpression(
+    Parameter=parameter22,
+    Expression="1000 [N]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter22,
+    Expression="1500 [N]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter22,
+    Expression="2000 [N]")
+designPoint5.SetParameterExpression(
+    Parameter=parameter22,
+    Expression="2500 [N]")
+backgroundSession1 = UpdateAllDesignPoints(DesignPoints=[designPoint2, designPoint3, designPoint4, designPoint5])
+parameter2.Delete()
+parameter3.Delete()
+parameter20.Delete()
+parameter21.Delete()
+designPoint6 = Parameters.CreateDesignPoint()
+designPoint6.SetParameterExpression(
+    Parameter=parameter22,
+    Expression="3000 [N]")
+backgroundSession2 = UpdateAllDesignPoints(DesignPoints=[designPoint6])
+parameter8.Disassociate(
+    Entity=materialVariable1,
+    PropertyName="ParameterValue")
+parameter8.Delete()
+model1.Edit()
+parameter23 = Parameters.GetParameter(Name="P22")
+designPoint1.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="3.9528 [mm]")
+designPoint2.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="4500 [mm]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="5000 [mm]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="5500 [mm]")
+designPoint5.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="6000 [mm]")
+designPoint6.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="6500 [mm]")
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint1, designPoint2, designPoint3, designPoint4, designPoint5, designPoint6])
+designPoint2.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="3.9528 [mm]")
+designPoint3.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="3.9528 [mm]")
+designPoint4.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="3.9528 [mm]")
+designPoint5.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="3.9528 [mm]")
+designPoint6.SetParameterExpression(
+    Parameter=parameter23,
+    Expression="3.9528 [mm]")
+backgroundSession3 = UpdateAllDesignPoints(DesignPoints=[designPoint2, designPoint3, designPoint4, designPoint5, designPoint6])
+designPoint2.Retained = True
+designPoint3.Retained = True
+designPoint4.Retained = True
+designPoint5.Retained = True
+designPoint6.Retained = True
+chart1 = Parameters.CreateParameterVsParameterChart()
+designPoint2.Retained = False
+designPoint4.Retained = False
+designPoint3.Retained = False
+designPoint5.Retained = False
+designPoint6.Retained = False
+chart1.XAxisBottom = parameter22
+parameter24 = Parameters.GetParameter(Name="P17")
+chart1.XAxisTop = parameter24
+variableDataObjectDouble1 = GetDataEntity("/Parameters/VariableDataObjectDouble:default")
+chart1.XAxisTop = variableDataObjectDouble1
+chart1.YAxisLeft = parameter24
+chart1.IsBaseDesignPointExcluded = True
+chart1.IsBaseDesignPointExcluded = False
+Save(Overwrite=True)
+Save(Overwrite=True)
+Reset()

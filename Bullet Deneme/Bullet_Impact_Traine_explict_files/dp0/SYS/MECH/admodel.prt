@@ -1,0 +1,544 @@
+ ANSYS
+
+
+
+       AAAAAA   UU    UU  TTTTTTTT   OOOOOO   DDDDDDD   YY    YY  NN    NN  TM
+      AA    AA  UU    UU     TT     OO    OO  DD    DD   YY  YY   NNN   NN
+      AA    AA  UU    UU     TT     OO    OO  DD    DD    YYYY    NNNN  NN
+      AAAAAAAA  UU    UU     TT     OO    OO  DD    DD     YY     NN NN NN
+      AA    AA  UU    UU     TT     OO    OO  DD    DD     YY     NN  NNNN
+      AA    AA  UU    UU     TT     OO    OO  DD    DD     YY     NN   NNN
+      AA    AA   UUUUUU      TT      OOOOOO   DDDDDDD      YY     NN    NN
+
+
+
+
+           Copyright (C) 2018, ANSYS, Inc.  All rights reserved.
+           Unauthorized use, distribution or duplication is prohibited.
+
+
+
+
+ 
+
+
+
+
+                                2020 R2
+                                   
+                 Point Releases and Patches installed:
+                                   
+                     ANSYS, Inc. Products 2020 R2
+                          SpaceClaim 2020 R2
+                           Discovery 2020 R2
+                              AIM 2020 R2
+                  Live (includes SpaceClaim) 2020 R2
+                            Autodyn 2020 R2
+                            LS-DYNA 2020 R2
+                             Aqwa 2020 R2
+      Customization Files for User Programmable Features 2020 R2
+                      Mechanical Products 2020 R2
+                           Additive 2020 R2
+                            Viewer 2020 R2
+                    ACIS Geometry Interface 2020 R2
+                  AutoCAD Geometry Interface 2020 R2
+              Catia, Version 4 Geometry Interface 2020 R2
+              Catia, Version 5 Geometry Interface 2020 R2
+              Catia, Version 6 Geometry Interface 2020 R2
+       Creo Elements/Direct Modeling Geometry Interface 2020 R2
+              Creo Parametric Geometry Interface 2020 R2
+                  Inventor Geometry Interface 2020 R2
+                   JTOpen Geometry Interface 2020 R2
+                     NX Geometry Interface 2020 R2
+                 Parasolid Geometry Interface  2020 R2
+                 Solid Edge Geometry Interface 2020 R2
+                 SOLIDWORKS Geometry Interface 2020 R2
+                  ANSYS, Inc. License Manager 2020 R2
+
+
+
+
+                            Solver :   EXPLICIT
+                             Build :   AUTODYN-3D Version 2020 R2              
+                Model File Version :   2020 R2
+                        Build Date :   20200529
+                 Current Date/Time :   20230611 11:57 (+0300GMT)
+                          Platform :   64 bit
+                              Beta :   FALSE
+                   User Subroutine :   FALSE
+                               MPI :   Disabled - running in serial
+
+
+
+
+                             IDENT :   admodel                                                                                                                                                                                                                                                         
+                             Title :                                           
+                       Description :                                                                                                                                                                                                                                                                   
+                       Start Cycle :            0
+                        Start Time :  0.00000E+00
+                         Precision :   Double
+
+
+
+
+   UNITS
+
+                            Length :   millimeter
+                              Mass :   milligram 
+                              Time :   millisec. 
+
+
+
+
+   SYMMETRY PLANES
+
+             Symmetry plane at X=0 :   No        
+                               Y=0 :   No        
+                               Z=0 :   No        
+
+
+
+
+   WRAPUP PARAMETERS
+
+                       Cycle Limit :     10000000
+                        Time Limit :  8.00000E+03
+     Maximum Energy Error Fraction :  1.00000E-01
+            Energy Reference Cycle :            0
+
+
+
+
+   MULTIPLE LOADSTEP DEFINITION
+
+     Step    Type             Step End Time   Static Damping
+
+        1    Standard         8.0000E+03      0.0000E+00
+
+
+
+
+   LOADSTEP OUTPUT CONTROLS
+
+     Step    Results       Value      Restarts       Value      Trackers      Value
+
+        1    Global          -         Global          -         Global          -     
+
+
+
+
+   TIME STEP INFORMATION
+
+                 Minimum Time Step :  8.28932E-07
+                 Maximum Time Step :  1.00000E+08
+                 Initial Time Step :  8.28932E-06
+           Time Step Safety Factor :  9.00000E-01
+                      Mass scaling :  OFF
+
+
+
+
+   GRAVITATIONAL CONSTANTS
+
+             Global X Gravity :  0.00000E+00
+             Global Y Gravity :  0.00000E+00
+             Global Z Gravity :  0.00000E+00
+
+
+
+
+   GRAVITATIONAL AND ACCELERATION CONSTANTS - SUM AT START CYCLE
+
+             Total  X Acceleration :  0.00000E+00
+             Total  Y Acceleration :  0.00000E+00
+             Total  Z Acceleration :  0.00000E+00
+
+
+
+
+
+ 
+   DAMPING CONSTANTS
+
+                 Hourglass Damping :  1.00000E-01
+                    Static Damping : Per loadstep
+
+
+
+
+   ARTIFICIAL VISCOSITY
+
+               Quadratic Viscosity :  1.00000E+00
+                  Linear Viscosity :  2.00000E-01
+     Apply Lin.vis. in exp. for HE :  No
+     Art. vis. in structured shells:  Yes
+
+
+
+
+   GLOBAL OUTPUT CONTROLS
+
+                    Save Results On  : Time
+                    Increments :        4.00000E+02
+                    Save Restarts On  : Time
+                    Increments :        1.60000E+03
+                    Save Trackers On : Cycles
+                    Increments :        1.00000E+00
+
+
+
+
+   CUTOFF VALUES
+
+                   Velocity Cutoff :  1.00000E-06
+                 Soundspeed Cutoff :  1.00000E-06
+                     Radius Cutoff :  1.00000E-03
+                  Maximum Velocity :  1.00000E+10
+               Maximum Temperature :  1.01000E+20
+                    Join Tolerance :  5.00000E-02
+
+
+
+
+   METHOD OF CALCULATING CHARACTERISTIC ZONE DIMENSION
+
+                     Method to Use :  Diagonals
+
+
+
+
+   METHOD OF UPDATING LAG/ALE CELL DENSITIES AND COMPRESSIONS
+
+                     Method to Use :  Automatic
+
+
+
+
+   USER VARIABLES
+
+     Fortran name  User name     Restart  Rezone
+
+     VAR01         VAR.1         N        N
+     VAR02         VAR.2         N        N
+     VAR03         VAR.3         N        N
+     VAR04         VAR.4         N        N
+     VAR05         VAR.5         N        N
+     VAR06         VAR.6         N        N
+     VAR07         VAR.7         N        N
+     VAR08         VAR.8         N        N
+     VAR09         VAR.9         N        N
+     VAR10         VAR.10        N        N
+     VAR11         VAR.11        N        N
+     VAR12         VAR.12        N        N
+     VAR13         VAR.13        N        N
+     VAR14         VAR.14        N        N
+     VAR15         VAR.15        N        N
+     VAR16         VAR.16        N        N
+     VAR17         VAR.17        N        N
+     VAR18         VAR.18        N        N
+     VAR19         VAR.19        N        N
+     VAR20         VAR.20        N        N
+
+
+
+
+
+ 
+   GLOBAL MATERIAL SETTINGS
+
+      Shell yield converg. accuracy:  High
+
+
+
+
+   MATERIALS
+
+
+
+                         MATERIAL NAME: 316 Stainless Steel           
+
+
+                     Equation of State             Linear                                                                          
+
+          Reference density                      (g/cm3   ) 7.95400E+00
+          Bulk Modulus                           (kPa     ) 1.30000E+08
+          Reference Temperature                  (K       ) 2.95150E+02
+          Specific Heat                          (J/kgK   ) 4.98733E+02
+          Thermal Conductivity                   (J/mKs   ) 0.00000E+00
+
+
+                     Strength                      Bilinear Hardening                                                              
+
+          Shear Modulus                          (kPa     ) 7.80000E+07
+          Yield Stress                           (kPa     ) 2.25000E+05
+          Tangent Modulus                        (kPa     ) 2.09100E+06
+                  Hardening                               : Isotropic                             
+
+
+                     Failure                       None                                                                            
+
+
+
+                     Erosion                       None                                                                            
+
+
+
+                     Material Cutoffs              
+
+          Maximum Expansion                      (none    ) 1.00000E-01
+          Minimum Density Factor                 (none    ) 1.00000E-04
+          Minimum Density Factor (SPH)           (none    ) 2.00000E-01
+          Maximum Density Factor (SPH)           (none    ) 3.00000E+00
+          Minimum Soundspeed                     (m/s     ) 1.00000E-06
+          Maximum Soundspeed (SPH)               (m/s     ) 1.01000E+20
+          Maximum Temperature                    (K       ) 1.01000E+20
+
+
+           Reference: 
+                                                                                                                                                                                                                                                                
+
+
+           Notes: 
+                                                                                                                                                                                                                                                                
+
+
+                         MATERIAL NAME: Titanium Alloy                
+
+
+                     Equation of State             Linear                                                                          
+
+          Reference density                      (g/cm3   ) 4.62000E+00
+          Bulk Modulus                           (kPa     ) 1.14286E+08
+          Reference Temperature                  (K       ) 2.95150E+02
+          Specific Heat                          (J/kgK   ) 5.22000E+02
+          Thermal Conductivity                   (J/mKs   ) 0.00000E+00
+
+
+                     Strength                      Elastic                                                                         
+
+          Shear Modulus                          (kPa     ) 3.52941E+07
+
+
+                     Failure                       None                                                                            
+
+
+
+                     Erosion                       None                                                                            
+
+
+
+                     Material Cutoffs              
+
+          Maximum Expansion                      (none    ) 1.00000E-01
+          Minimum Density Factor                 (none    ) 1.00000E-04
+          Minimum Density Factor (SPH)           (none    ) 2.00000E-01
+          Maximum Density Factor (SPH)           (none    ) 3.00000E+00
+          Minimum Soundspeed                     (m/s     ) 1.00000E-06
+          Maximum Soundspeed (SPH)               (m/s     ) 1.01000E+20
+          Maximum Temperature                    (K       ) 1.01000E+20
+
+
+           Reference: 
+                                                                                                                                                                                                                                                                
+
+
+           Notes: 
+                                                                                                                                                                                                                                                                
+
+
+
+
+
+
+
+
+
+ 
+   BOUNDARY CONDITIONS
+
+
+
+                     Fixed Support : General 3D Velocity                                             
+
+                  Constant X velocity  :  0.00000E+00
+                  Constant Y velocity  :  0.00000E+00
+                  Constant Z velocity  :  0.00000E+00
+           Constant ang. vel. about X  :  0.00000E+00
+           Constant ang. vel. about Y  :  0.00000E+00
+           Constant ang. vel. about Z  :  0.00000E+00
+
+
+
+
+
+
+
+
+
+ 
+     UNSTRUCTURED PARTS
+
+           PART                  NO. ELEMENTS         ELEMENT TYPE   ARTIFICIAL VISC.   HOURGLASS CONTROL     VISCOUS COEFF.   
+
+       1   Solid                         3840            Hex 8            Yes           AD STANDARD            1.00000E-01
+       2   Solid-2                       9386            Hex 8            Yes           AD STANDARD            1.00000E-01
+
+           TOTAL NUMBER ELEMENTS:       13226
+           TOTAL NUMBER NODES:          15225
+
+
+
+
+     BODY CONTROL SPECIFICATION
+
+            
+
+            
+
+       SOLID PART(S)
+
+           PART                  TET INTEGRATION TYPE         HEX INTEGRATION TYPE         HOURGLASS DAMPING        VISCOUS COEFF.    STIFFNESS COEFF.      PUSO STAB.   
+
+       1  Solid                  N/A                                EXACT                  AD STANDARD               1.00000E-01         0.00000E+00        0.00000E+00
+       2  Solid-2                N/A                                EXACT                  AD STANDARD               1.00000E-01         0.00000E+00        0.00000E+00
+            
+
+   PART ACTIVATION / DEACTIVATION TIMES
+
+           PART           ACTIVATION   DEACTIVATION
+                             TIME          TIME
+
+
+
+
+
+ 
+   EDITS
+
+       EDIT FREQUENCY
+       EDIT TYPE   HOW DONE          START           END     INCREMENT
+
+       SAVE        by times    0.00000E+00   8.00000E+03   1.60000E+03
+       GRIDVAR     Never     
+       ENERGYSUM   by times    0.00000E+00   8.00000E+03   1.60000E+03
+       CYCSUM      Never     
+       HISTORY     by cycles             0      10000000             1
+       USER        Never     
+       FIELD       Never     
+
+ 
+   INTERACTIONS
+
+          Using trajectory contact:  Yes
+                            Method:  Penalty
+                   Sliding Surface:  Discrete
+                     Penalty Force:  Harmonic Mass
+           Group Contact Treatment:  Lumped
+            Shell thickness factor:  0.00000E+00
+            Full SPH radius (beta):  No        
+                  Search Algorithm:  Cube            
+              Retention of Inertia:  Yes       
+                  Self-interaction:  Yes       
+             Self-interaction Tol.:  2.00000E-01
+
+     Part Name       I-range             J-range             K-range
+     Solid                               Active
+     Solid-2                             Active
+
+     No coefficients of friction have been specified
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CYCLE       0, TIME=  0.000E+00                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+316 Stainless Steel                 5.965E+04 7.500E+03 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+Titanium Alloy                      3.622E+03 7.840E+02 0.000E+00 1.503E+09 0.000E+00 0.000E+00-3.300E+06
+---------------------------------------------------------------------------------------------------------
+TOTALS                              6.328E+04 8.284E+03 0.000E+00 1.503E+09 0.000E+00 0.000E+00-3.300E+06
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+Solid                               5.965E+04 7.500E+03 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00
+Solid-2                             3.622E+03 7.840E+02 0.000E+00 1.503E+09 0.000E+00 0.000E+00-3.300E+06 0.000E+00 0.000E+00
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              6.328E+04 8.284E+03 0.000E+00 1.503E+09 0.000E+00 0.000E+00-3.300E+06 0.000E+00 0.000E+00
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.503E+09, X-MOM  0.000E+00, Y-MOM  0.000E+00, Z-MOM -3.300E+06
+EXTERNAL WORK   0.000E+00, X-IMP  0.000E+00, Y-IMP  0.000E+00, Z-IMP  0.000E+00
+CONTACT ENERGY  0.000E+00
+CURRENT ENERGY  1.503E+09, X-MOM  0.000E+00, Y-MOM  0.000E+00, Z-MOM -3.300E+06
+-------------------------------------------------------------------------------
+ERROR           0.000E+00         0.000E+00         0.000E+00         0.000E+00
+
+CYCLE   45222, TIME=  8.408E-01                                                                                  ENERGY SUMMARY EDIT
+ 
+
+
+ENERGY AND MOMENTUM PARTITIONING BY MATERIALS
+
+                                                         INTERNAL   KINETIC
+MATERIAL                                 MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM
+
+316 Stainless Steel                 5.965E+04 7.500E+03 1.257E+09 3.613E+05 1.257E+01 9.621E+03 1.635E+05
+Titanium Alloy                      3.622E+03 7.838E+02 1.742E+08 4.212E+07 5.810E+02-9.277E+04 2.743E+05
+---------------------------------------------------------------------------------------------------------
+TOTALS                              6.328E+04 8.284E+03 1.431E+09 4.248E+07 5.936E+02-8.315E+04 4.379E+05
+
+
+ENERGY AND MOMENTUM PARTITIONING BY PARTS
+
+                                                         INTERNAL   KINETIC                               HOURGLASS   CONTACT
+PART                                     MASS    VOLUME    ENERGY    ENERGY XMOMENTUM YMOMENTUM ZMOMENTUM    ENERGY    ENERGY
+
+Solid                               5.965E+04 7.500E+03 1.257E+09 3.613E+05 1.257E+01 9.621E+03 1.635E+05 1.769E+08 1.258E+09
+Solid-2                             3.622E+03 7.838E+02 1.742E+08 4.212E+07 5.810E+02-9.277E+04 2.743E+05 1.380E+08-1.277E+09
+-----------------------------------------------------------------------------------------------------------------------------
+TOTALS                              6.328E+04 8.284E+03 1.431E+09 4.248E+07 5.936E+02-8.315E+04 4.379E+05 3.149E+08-1.951E+07
+
+
+ENERGY AND MOMENTUM BALANCE
+
+INITIAL ENERGY  1.503E+09, X-MOM  0.000E+00, Y-MOM  0.000E+00, Z-MOM -3.300E+06
+EXTERNAL WORK   0.000E+00, X-IMP  5.936E+02, Y-IMP -8.315E+04, Z-IMP  3.737E+06
+CONTACT ENERGY -1.951E+07
+CURRENT ENERGY  1.474E+09, X-MOM  5.936E+02, Y-MOM -8.315E+04, Z-MOM  4.379E+05
+-------------------------------------------------------------------------------
+ERROR          -9.555E+06         7.015E-08         1.291E-08         5.569E-07
+ 
+ 
+SIMULATION ELAPSED TIME SUMMARY
+ 
+EXECUTION FROM CYCLE        0 TO    45222
+ELAPSED RUN TIME IN SOLVER  =      2.42215E+01 Minutes
+ELAPSED RUN TIME IN CONTACT =      5.43195E+00 Minutes
+ELAPSED RUN TIME IN EDITS   =      1.51583E-01 Minutes
+TOTAL ELAPSED RUN TIME      =      2.43731E+01 Minutes
+ 
